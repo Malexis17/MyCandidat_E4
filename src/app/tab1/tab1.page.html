@@ -15,4 +15,8 @@
 
   <ion-button expand="block" routerLink="/inscription">Inscription</ion-button>
   <ion-button expand="block" routerLink="/enseignant">Espace enseignant</ion-button>
+
+  <ion-item *ngFor="let item of items | async">
+    <ion-label>{{ item.Pseudo }}</ion-label>
+</ion-item>
 </ion-content>
