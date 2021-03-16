@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'inscription',
     loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
+  },
+  {
+    path: 'enseignant',
+    loadChildren: () => import('./enseignant/enseignant.module').then( m => m.EnseignantPageModule)
   }
 ];
 @NgModule({
