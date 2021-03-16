@@ -9,4 +9,73 @@
 
 <ion-content>
 
+
+  <!-- Default textarea -->
+<ion-textarea></ion-textarea>
+
+<!-- Textarea in an item with a placeholder -->
+<ion-item>
+  <ion-label position="floating">Nom</ion-label>
+  <ion-textarea></ion-textarea>
+</ion-item>
+
+<!-- Textarea in an item with a floating label -->
+<ion-item>
+  <ion-label position="floating">Prenom</ion-label>
+  <ion-textarea></ion-textarea>
+</ion-item>
+
+
+<!-- Textarea that clears the value on edit -->
+<ion-item>
+  <ion-label position="floating">Adresse</ion-label>
+  <ion-textarea></ion-textarea>
+</ion-item>
+
+<!-- Textarea with custom number of rows and cols -->
+<ion-item>
+  <ion-label position="floating">Code Postal</ion-label>
+  <ion-textarea></ion-textarea>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Ville</ion-label>
+  <ion-textarea></ion-textarea>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating"  maxlength="10">Telephone</ion-label>
+  <ion-textarea></ion-textarea>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Email</ion-label>
+  <ion-textarea></ion-textarea>
+</ion-item>
+
+<ion-list>
+
+  <ion-item>
+    <ion-label>Toppings</ion-label>
+    <ion-select multiple="true" cancelText="Non" okText="Oui">
+      <ion-select-option value=""></ion-select-option>
+      <ion-select-option value=""></ion-select-option>
+      <ion-select-option value=""></ion-select-option>
+      <ion-select-option value=""></ion-select-option>
+      <ion-select-option value=""></ion-select-option>
+      <ion-select-option value=""></ion-select-option>
+      <ion-select-option value=""></ion-select-option>
+      <ion-select-option value=""></ion-select-option>
+      <ion-select-option value=""></ion-select-option>
+      <ion-select-option value=""></ion-select-option>
+    </ion-select>
+  </ion-item>
+
+ 
+</ion-list>
+
+<!-- Expand -->
+<ion-button expand="full" routerLink="" >Valider</ion-button>
+
+
 </ion-content>
