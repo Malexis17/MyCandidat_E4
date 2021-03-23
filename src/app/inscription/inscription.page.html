@@ -11,71 +11,58 @@
 
 
   <!-- Default textarea -->
-<ion-textarea></ion-textarea>
 
 <!-- Textarea in an item with a placeholder -->
 <ion-item>
-  <ion-label position="floating">Nom</ion-label>
-  <ion-textarea></ion-textarea>
+  <ion-label position="floating">Nom:</ion-label>
+  <ion-input [(ngModel)]="firebaseData.nom" type="text" placeholder="Entrer votre nom"></ion-input>
 </ion-item>
 
 <!-- Textarea in an item with a floating label -->
 <ion-item>
-  <ion-label position="floating">Prenom</ion-label>
-  <ion-textarea></ion-textarea>
+  <ion-label position="floating">Prenom:</ion-label>
+  <ion-input [(ngModel)]="firebaseData.Prenom" type="text" placeholder="Entrer votre Prenom"></ion-input>
 </ion-item>
 
 
 <!-- Textarea that clears the value on edit -->
 <ion-item>
-  <ion-label position="floating">Adresse</ion-label>
-  <ion-textarea></ion-textarea>
+  <ion-label position="floating">Adresse:</ion-label>
+  <ion-input [(ngModel)]="firebaseData.Adresse" type="text" placeholder="Entrer votre Adresse"></ion-input>
 </ion-item>
 
 <!-- Textarea with custom number of rows and cols -->
 <ion-item>
-  <ion-label position="floating">Code Postal</ion-label>
-  <ion-textarea></ion-textarea>
+  <ion-label position="floating">Code Postal:</ion-label>
+  <ion-input [(ngModel)]="firebaseData.CodePostal" type="text" placeholder="Entrer votre code postal"></ion-input>
 </ion-item>
 
 <ion-item>
-  <ion-label position="floating">Ville</ion-label>
-  <ion-textarea></ion-textarea>
+  <ion-label position="floating">Ville:</ion-label>
+  <ion-input [(ngModel)]="firebaseData.Ville" type="text" placeholder="Entrer votre Ville"></ion-input>
 </ion-item>
 
 <ion-item>
-  <ion-label position="floating"  maxlength="10">Telephone</ion-label>
-  <ion-textarea></ion-textarea>
+  <ion-label position="floating"  maxlength="10">Telephone:</ion-label>
+  <ion-input [(ngModel)]="firebaseData.Telephone" type="text" placeholder="Entrer votre téléphone"></ion-input>
 </ion-item>
 
 <ion-item>
-  <ion-label position="floating">Email</ion-label>
-  <ion-textarea></ion-textarea>
+  <ion-label position="floating">Email:</ion-label>
+  <ion-input [(ngModel)]="firebaseData.Email" type="text" placeholder="Entrer votre Email"></ion-input>
 </ion-item>
 
-<ion-list>
 
-  <ion-item>
-    <ion-label>Toppings</ion-label>
-    <ion-select multiple="true" cancelText="Non" okText="Oui">
-      <ion-select-option value=""></ion-select-option>
-      <ion-select-option value=""></ion-select-option>
-      <ion-select-option value=""></ion-select-option>
-      <ion-select-option value=""></ion-select-option>
-      <ion-select-option value=""></ion-select-option>
-      <ion-select-option value=""></ion-select-option>
-      <ion-select-option value=""></ion-select-option>
-      <ion-select-option value=""></ion-select-option>
-      <ion-select-option value=""></ion-select-option>
-      <ion-select-option value=""></ion-select-option>
-    </ion-select>
-  </ion-item>
 
- 
-</ion-list>
 
 <!-- Expand -->
-<ion-button expand="full" routerLink="" >Valider</ion-button>
+<ion-button (click)="addFirebase()" expand="full" >Valider</ion-button>
+
+
+
+
+
+
 
 
 </ion-content>

@@ -11,6 +11,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDRj1_n1bt7-NASuxTy-0ZSM3xAEFWMRbs",
@@ -31,7 +33,8 @@ export const firebaseConfig = {
             AngularFireModule.initializeApp(firebaseConfig),
             AngularFireDatabaseModule,
             AngularFireAuthModule,
-            AngularFireStorageModule
+            AngularFireStorageModule,
+            AngularFirestoreModule
           ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
