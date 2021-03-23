@@ -3,16 +3,15 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-enseignant',
-  templateUrl: './enseignant.page.html',
-  styleUrls: ['./enseignant.page.scss'],
+  selector: 'app-login',
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss'],
 })
-export class EnseignantPage implements OnInit {
+export class LoginPage implements OnInit {
   dataUser = {
     email: '',
     password:''
   };
-
   connected: boolean;
 
   constructor(
@@ -23,17 +22,20 @@ export class EnseignantPage implements OnInit {
       if ( !auth){
         console.log('non connecté');
         this.connected = false;
-        this.router.navigateByUrl('/login');
       } else {
         console.log('connecté');
         this.connected = true;
-        
+        this.router.navigateByUrl('/enseignant');
       }
     })
   }
 
-  logout(){
-    this.afAuth.signOut();
+  login(){
+    this.afAuth.signInWithEmailAndPassword(this.dataUser.email, this.dataUser.password);
+    this.dataUser = {
+      email: '',
+      password: ''
+    };
   }
 
   ngOnInit() {

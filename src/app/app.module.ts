@@ -15,6 +15,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 export const firebaseConfig = {
   apiKey: "AIzaSyDRj1_n1bt7-NASuxTy-0ZSM3xAEFWMRbs",
   authDomain: "mycandidat-ccf84.firebaseapp.com",
+  databaseURL: "https://mycandidat-ccf84-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "mycandidat-ccf84",
   storageBucket: "mycandidat-ccf84.appspot.com",
   messagingSenderId: "598818483694",
