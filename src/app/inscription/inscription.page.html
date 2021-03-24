@@ -53,6 +53,30 @@
 </ion-item>
 
 
+<ion-list>
+  <ion-radio-group value="Formation" [(ngModel)]="firebaseData.Formation">
+    <ion-list-header>
+      <ion-label>Formation</ion-label>
+      
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Bac Général</ion-label>
+      <ion-radio slot="start" value="Bac Général" ></ion-radio>
+      
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Bac Technologique</ion-label>
+      <ion-radio slot="start" value="Bac Technologique"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Bac professionel</ion-label>
+      <ion-radio slot="start" value="Bac Professionel"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+</ion-list>
 
 
 <!-- Expand -->

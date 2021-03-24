@@ -23,6 +23,7 @@ Candidat: Observable<any[]>;
     Ville:'',
     Telephone:'',
     Email:'',
+    Formation:''
   
    
   };
@@ -48,7 +49,10 @@ Candidat: Observable<any[]>;
     CodePostal:'',
     Ville:'',
     Telephone:'',
-    Email:''
+    Email:'',
+    Formation:''
+    
+   
    
   };
   
