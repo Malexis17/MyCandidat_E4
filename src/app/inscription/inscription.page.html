@@ -34,7 +34,7 @@
 <!-- Textarea with custom number of rows and cols -->
 <ion-item>
   <ion-label position="floating">Code Postal:</ion-label>
-  <ion-input [(ngModel)]="firebaseData.CodePostal" type="text" placeholder="Entrer votre code postal"></ion-input>
+  <ion-input [(ngModel)]="firebaseData.CodePostal" type="text" maxlength="5" placeholder="Entrer votre code postal"></ion-input>
 </ion-item>
 
 <ion-item>
@@ -43,8 +43,8 @@
 </ion-item>
 
 <ion-item>
-  <ion-label position="floating"  maxlength="10">Telephone:</ion-label>
-  <ion-input [(ngModel)]="firebaseData.Telephone" type="text" placeholder="Entrer votre téléphone"></ion-input>
+  <ion-label position="floating">Telephone:</ion-label>
+  <ion-input [(ngModel)]="firebaseData.Telephone" type="text" maxlength="10"placeholder="Entrer votre téléphone"></ion-input>
 </ion-item>
 
 <ion-item>
@@ -53,14 +53,14 @@
 </ion-item>
 
 
-<ion-list>
+<!--<ion-list>
   <ion-radio-group value="Formation" [(ngModel)]="firebaseData.Formation">
     <ion-list-header>
       <ion-label>Formation</ion-label>
       
     </ion-list-header>
 
-    <ion-item>
+  <ion-item>
       <ion-label>Bac Général</ion-label>
       <ion-radio slot="start" value="Bac Général" ></ion-radio>
       
@@ -76,11 +76,24 @@
       <ion-radio slot="start" value="Bac Professionel"></ion-radio>
     </ion-item>
   </ion-radio-group>
+</ion-list>-->
+
+<ion-list>
+  
+
+  <ion-item>
+    <ion-label>Formation</ion-label>
+    <ion-select placeholder="Select One" [(ngModel)]="firebaseData.Formation">
+      <ion-select-option value="Bac Général">Bac Général </ion-select-option>
+      <ion-select-option value="Bac Technologique">Bac Technologique</ion-select-option>
+      <ion-select-option value="Bac Professionel">Bac Professionel</ion-select-option>
+    </ion-select>
+  </ion-item>
+ 
 </ion-list>
 
-
 <!-- Expand -->
-<ion-button (click)="addFirebase()" expand="full" >Valider</ion-button>
+<ion-button (click)="addFirebase()" expand="block" >Valider</ion-button>
 
 
 
