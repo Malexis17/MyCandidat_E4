@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-enseignant',
@@ -8,6 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./enseignant.page.scss'],
 })
 export class EnseignantPage implements OnInit {
+  items: Observable<any[]>;
   dataUser = {
     email: '',
     password:''
@@ -18,6 +22,7 @@ export class EnseignantPage implements OnInit {
   constructor(
     public afAuth: AngularFireAuth,
     public router: Router,
+    public firestore: AngularFirestore,
   ) { 
     this.afAuth.authState.subscribe(auth => {
       if ( !auth){
@@ -30,6 +35,7 @@ export class EnseignantPage implements OnInit {
         
       }
     })
+    this.items = this.firestore.collection('Candidat').valueChanges();
   }
 
   logout(){
