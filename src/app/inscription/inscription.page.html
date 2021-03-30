@@ -10,80 +10,55 @@
 <ion-content>
 
 
-  <!-- Default textarea -->
-
 <!-- Textarea in an item with a placeholder -->
 <ion-item>
   <ion-label position="floating">Nom:</ion-label>
-  <ion-input [(ngModel)]="firebaseData.nom" type="text" placeholder="Entrer votre nom"></ion-input>
+  <ion-input [(ngModel)]="can_nom" type="text" placeholder="Entrer votre nom" id="can_nom"></ion-input>
 </ion-item>
 
 <!-- Textarea in an item with a floating label -->
 <ion-item>
   <ion-label position="floating">Prenom:</ion-label>
-  <ion-input [(ngModel)]="firebaseData.Prenom" type="text" placeholder="Entrer votre Prenom"></ion-input>
+  <ion-input [(ngModel)]="can_prenom" type="text" placeholder="Entrer votre Prenom" id="can_prenom"></ion-input>
 </ion-item>
 
 
 <!-- Textarea that clears the value on edit -->
 <ion-item>
   <ion-label position="floating">Adresse:</ion-label>
-  <ion-input [(ngModel)]="firebaseData.Adresse" type="text" placeholder="Entrer votre Adresse"></ion-input>
+  <ion-input [(ngModel)]="can_adr" type="text" placeholder="Entrer votre Adresse" id="can_adr"></ion-input>
 </ion-item>
 
 <!-- Textarea with custom number of rows and cols -->
 <ion-item>
   <ion-label position="floating">Code Postal:</ion-label>
-  <ion-input [(ngModel)]="firebaseData.CodePostal" type="text" maxlength="5" placeholder="Entrer votre code postal"></ion-input>
+  <ion-input [(ngModel)]="can_copos" type="text" maxlength="5" placeholder="Entrer votre code postal" id="can_copos"></ion-input>
 </ion-item>
 
 <ion-item>
   <ion-label position="floating">Ville:</ion-label>
-  <ion-input [(ngModel)]="firebaseData.Ville" type="text" placeholder="Entrer votre Ville"></ion-input>
+  <ion-input [(ngModel)]="can_ville" type="text" placeholder="Entrer votre Ville" id="can_ville"></ion-input>
 </ion-item>
 
 <ion-item>
   <ion-label position="floating">Telephone:</ion-label>
-  <ion-input [(ngModel)]="firebaseData.Telephone" type="text" maxlength="10"placeholder="Entrer votre téléphone"></ion-input>
+  <ion-input [(ngModel)]="can_tel" type="text" maxlength="10" placeholder="Entrer votre téléphone" id="can_tel"></ion-input>
 </ion-item>
 
 <ion-item>
   <ion-label position="floating">Email:</ion-label>
-  <ion-input [(ngModel)]="firebaseData.Email" type="text" placeholder="Entrer votre Email"></ion-input>
+  <ion-input [(ngModel)]="can_mail" type="text" placeholder="Entrer votre Email" id="can_email"></ion-input>
 </ion-item>
 
 
-<!--<ion-list>
-  <ion-radio-group value="Formation" [(ngModel)]="firebaseData.Formation">
-    <ion-list-header>
-      <ion-label>Formation</ion-label>
-      
-    </ion-list-header>
 
-  <ion-item>
-      <ion-label>Bac Général</ion-label>
-      <ion-radio slot="start" value="Bac Général" ></ion-radio>
-      
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Bac Technologique</ion-label>
-      <ion-radio slot="start" value="Bac Technologique"></ion-radio>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Bac professionel</ion-label>
-      <ion-radio slot="start" value="Bac Professionel"></ion-radio>
-    </ion-item>
-  </ion-radio-group>
-</ion-list>-->
 
 <ion-list>
   
 
   <ion-item>
     <ion-label>Formation</ion-label>
-    <ion-select placeholder="Select One" [(ngModel)]="firebaseData.Formation">
+    <ion-select placeholder="Select One" [(ngModel)]="can_form">
       <ion-select-option value="Bac Général">Bac Général </ion-select-option>
       <ion-select-option value="Bac Technologique">Bac Technologique</ion-select-option>
       <ion-select-option value="Bac Professionel">Bac Professionel</ion-select-option>
@@ -92,8 +67,30 @@
  
 </ion-list>
 
+
+<ion-item>
+  <ion-label position="floating">Etablissement:</ion-label>
+  <ion-input [(ngModel)]="lyc_nom" type="text" placeholder="Entrer votre établissement"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Adresse:</ion-label>
+  <ion-input [(ngModel)]="lyc_adr" type="text" placeholder="Entrer l'adresse de votre établissement"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Code Postal:</ion-label>
+  <ion-input [(ngModel)]="lyc_copos" maxlength="5" type="text" placeholder="Entrer le code postal de votre établissement"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Ville:</ion-label>
+  <ion-input [(ngModel)]="lyc_ville" type="text" placeholder="Entrer la ville de votre établissement"></ion-input>
+</ion-item>
+
+
 <!-- Expand -->
-<ion-button (click)="addFirebase()" expand="block" >Valider</ion-button>
+<ion-button (click)="addFirestore()"  expand="block" >Valider</ion-button>
 
 
 
