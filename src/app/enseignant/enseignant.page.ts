@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
 })
 export class EnseignantPage implements OnInit {
   items: Observable<any[]>;
+  etats: Observable<any[]>;
   dataUser = {
     email: '',
     password:''
@@ -36,6 +37,7 @@ export class EnseignantPage implements OnInit {
       }
     })
     this.items = this.firestore.collection('Candidat').valueChanges();
+    this.etats = this.firestore.collection('Lycee').valueChanges();
   }
 
   logout(){
@@ -43,6 +45,12 @@ export class EnseignantPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  doRefresh(event) {  
+    setTimeout(() => {
+      event.target.complete();
+    }, 1000); 
   }
 
 }

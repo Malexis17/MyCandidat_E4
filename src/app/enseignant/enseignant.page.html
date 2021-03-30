@@ -1,15 +1,38 @@
-<ion-content>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Liste des inscription
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true">
+  <ion-refresher slot ="fixed" disabled="false" (ionRefresh)="doRefresh($event)" pullFactor="0.5" pullMin="100" pullMax="200">  
+    <ion-refresher-content  
+    pullingIcon="arrow-down"  
+    pullingText="Swipe pour actualiser"  
+    refreshingSpinner="bubbles"  
+    refreshingText="Actualisation....."></ion-refresher-content>   
+  </ion-refresher> 
+
+  <ion-searchbar
+    showCancelButton 
+    cancel-button-icon
+    (ionCancel)="hideSearch()"
+    (search)="yourSearchFunction($event.target.value)" 
+    placeholder="Recherche">
+</ion-searchbar>
+
   <ion-card *ngFor="let item of items | async">
     <ion-card-header>
-      <ion-card-subtitle>{{ item.Formation}}</ion-card-subtitle>
-      <ion-card-title>{{ item.nom }} {{ item.Prenom }}</ion-card-title>
+      <ion-card-subtitle>{{ item.can_form}}</ion-card-subtitle>
+      <ion-card-title>{{ item.can_nom }} {{ item.can_prenom }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      {{ item.Adresse }} à {{ item.Ville}}, {{ item.copos }}<br>
-      Contact :{{ item.Telephone }} <br/>ou {{ item.Email }}
+      {{ item.can_adr }} à {{ item.can_ville}}, {{ item.can_copos }}<br>
+      Contact : {{ item.can_tel }} <br/>ou {{ item.can_email }}<br>
     </ion-card-content>
+    <ion-button class="archive" expand="block" fill="outline" color="dark" (click)="archive()">Archive</ion-button>
   </ion-card>
 
   <div *ngIf="connected">
