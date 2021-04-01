@@ -13,7 +13,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 
-
 export const firebaseConfig = {
   apiKey: "AIzaSyDRj1_n1bt7-NASuxTy-0ZSM3xAEFWMRbs",
   authDomain: "mycandidat-ccf84.firebaseapp.com",

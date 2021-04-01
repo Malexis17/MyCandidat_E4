@@ -5,7 +5,6 @@ import { Observable } from 'rxjs';
 
 
 
-
 @Component({
   selector: 'app-inscription',
   templateUrl: './inscription.page.html',
@@ -16,7 +15,7 @@ import { Observable } from 'rxjs';
 
 export class InscriptionPage implements OnInit {
   
-  
+
 
 Candidat: Observable<any[]>;
   can_id:number;
@@ -66,10 +65,19 @@ addFirestore(){
   constructor(public firestore: AngularFirestore) { 
     this.Candidat = this.firestore.collection('Candidat').valueChanges();
     this.Lycee=this.firestore.collection('Lycee').valueChanges();
+
+  
   }
 
+
+
+ 
+
   ngOnInit() {
-  }    
+  }  
+  
+
+  
 }
 
 
