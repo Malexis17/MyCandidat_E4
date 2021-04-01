@@ -53,4 +53,9 @@ export class EnseignantPage implements OnInit {
     }, 1000); 
   }
 
+  consulter(id){
+    console.log(id);
+    this.router.navigateByUrl("/consulter-candidat#"+id)
+  }
+
 }

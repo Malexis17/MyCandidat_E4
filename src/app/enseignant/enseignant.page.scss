@@ -19,9 +19,14 @@ ion-card-title {
     font-size: 18px;
 }
 
-.archive {
-    font-size: 15px;
-    margin-left: 225px;
-    margin-bottom: 15px;
-    font-style: italic;
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2%;
+    
+}
+
+.contenu{
+    line-height: 0.8;
 }

@@ -38,7 +38,7 @@ Candidat: Observable<any[]>;
     lyc_ville:string;
 
 addFirestore(){
-  this.can_id = new Date().getTime() + Math.floor(Math.random()*50);
+  this.can_id = new Date().getTime() + Math.floor(Math.random()*9);
   var id_doc_can= this.can_id.toString();
   this.firestore.collection('Candidat').doc(id_doc_can).set({
     can_id:this.can_id,

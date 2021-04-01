@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Fiche candidat</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="Retour"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngFor="let item of items | async">
+    <div *ngIf="item.can_id == id">
+      <h1>Fiche de <b>{{ item.can_nom }} {{ item.can_prenom }}</b></h1>
+      <h4>Coordonnées</h4>
+      <div>
+        
+      </div>
+    </div>
+  </ng-container>
+</ion-content>

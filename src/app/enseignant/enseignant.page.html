@@ -15,13 +15,13 @@
     refreshingText="Actualisation....."></ion-refresher-content>   
   </ion-refresher> 
 
-  <ion-searchbar
+  <!-- <ion-searchbar
     showCancelButton 
     cancel-button-icon
     (ionCancel)="hideSearch()"
     (search)="yourSearchFunction($event.target.value)" 
     placeholder="Recherche">
-</ion-searchbar>
+</ion-searchbar> -->
 
   <ion-card *ngFor="let item of items | async">
     <ion-card-header>
@@ -29,10 +29,20 @@
       <ion-card-title>{{ item.can_nom }} {{ item.can_prenom }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      {{ item.can_adr }} à {{ item.can_ville}}, {{ item.can_copos }}<br>
-      Contact : {{ item.can_tel }} <br/>ou {{ item.can_email }}<br>
+      <div class="contenu">
+        <p>Adresse - {{ item.can_adr }} à {{ item.can_ville}}, {{ item.can_copos }}<br></p>
+        <p>Contact - {{ item.can_tel }} ou {{ item.can_mail }}<br></p>
+      </div>
+      <!-- div *ngFor="let etat of etats | async">
+        <div *ngIf="etat.can_id == item.can_id">
+          <p>Lycée actuel : {{ etat.lyc_nom}} à {{ etat.lyc_ville}}</p>
+        </div>
+      </div> -->
     </ion-card-content>
-    <ion-button class="archive" expand="block" fill="outline" color="dark" (click)="archive()">Archive</ion-button>
+    <div class="flex">
+      <ion-button class="archive" expand="block" fill="outline" color="dark" (click)="consulter(item.can_id)">Consulter</ion-button>
+      <ion-button class="consulter" expand="block" fill="outline" color="dark">Archiver</ion-button>
+    </div>
   </ion-card>
 
   <div *ngIf="connected">
