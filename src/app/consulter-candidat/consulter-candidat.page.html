@@ -11,10 +11,25 @@
   <ng-container *ngFor="let item of items | async">
     <div *ngIf="item.can_id == id">
       <h1>Fiche de <b>{{ item.can_nom }} {{ item.can_prenom }}</b></h1>
-      <h4>Coordonnées</h4>
-      <div>
-        
+      <h4>Profil</h4>
+      <div class="info">
+        <p>Le candidat est {{ item.can_nom }} {{ item.can_prenom}}</p>
+        <p>Né le {{ item.can_dateNaiss}}</p>
+        <p>Habite au {{ item.can_adr }} à {{ item.can_ville }}, {{ item.can_copos }}</p>
       </div>
+      <h4>Coordonnées</h4>
+        <div class="info">
+          <p>Son numero de tel est le {{ item.can_tel }}</p>
+          <p>Et son adresse mail est {{ item.can_mail }}</p>
+        </div>
+      <h4>Formation</h4>
+        <ng-container *ngFor="let etat of etats | async">
+          <div class="info" *ngIf="etat.can_id == item.can_id">
+            <p>Il est actuel en formation de {{ item.can_form}}</p>
+            <p>Dans l'etablisement {{ etat.lyc_nom }}</p>
+            <p>Au {{ etat.lyc_adr }} à {{ etat.lyc_ville }}, {{ etat.lyc_copos }}</p>
+          </div>
+        </ng-container>
     </div>
   </ng-container>
 </ion-content>

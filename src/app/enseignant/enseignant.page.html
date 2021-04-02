@@ -30,8 +30,8 @@
     </ion-card-header>
     <ion-card-content>
       <div class="contenu">
-        <p>Adresse - {{ item.can_adr }} à {{ item.can_ville}}, {{ item.can_copos }}<br></p>
-        <p>Contact - {{ item.can_tel }} ou {{ item.can_mail }}<br></p>
+        <p><ion-icon name="home-outline"></ion-icon> {{ item.can_adr }} à {{ item.can_ville}}, {{ item.can_copos }}<br></p>
+        <p><ion-icon name="call-outline"></ion-icon> {{ item.can_tel }}<br/> <ion-icon name="mail-outline"></ion-icon> {{ item.can_mail }}<br></p>
       </div>
       <!-- div *ngFor="let etat of etats | async">
         <div *ngIf="etat.can_id == item.can_id">
