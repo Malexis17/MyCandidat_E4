@@ -27,7 +27,8 @@ Candidat: Observable<any[]>;
   can_tel:number;
   can_mail:string;
   can_form:string;
-  can_dateIns:string=new Date().getUTCDate() + "/" +(new Date().getUTCMonth()+1) + "/" + new Date().getUTCFullYear();
+  can_dateNais:Date;
+  /*can_dateIns:string=new Date().getUTCDate() + "/" +(new Date().getUTCMonth()+1) + "/" + new Date().getUTCFullYear();*/
 
 
   Lycee:Observable<any[]>;
@@ -48,7 +49,8 @@ addFirestore(){
     can_ville:this.can_ville,
     can_tel:this.can_tel,
     can_mail:this.can_mail,
-    can_form:this.can_form
+    can_form:this.can_form,
+    can_dateNais:this.can_dateNais
   })
   this.firestore.collection('Lycee').add({
     can_id:this.can_id,

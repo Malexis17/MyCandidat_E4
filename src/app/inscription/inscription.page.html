@@ -22,6 +22,10 @@
   <ion-input [(ngModel)]="can_prenom" type="text" placeholder="Entrer votre Prenom" id="can_prenom"></ion-input>
 </ion-item>
 
+<ion-item>
+  <ion-label position="floating">Date de naissance</ion-label>
+  <ion-datetime display-format="DD MM YYYY" [(ngModel)]="can_dateNais" placeholder="indiquer votre date de naissance"></ion-datetime>
+</ion-item>
 
 <!-- Textarea that clears the value on edit -->
 <ion-item>
@@ -91,7 +95,8 @@
 
 
 <!-- Expand -->
-<ion-button (click)="addFirestore()"  click="openToast" expand="block" >Valider</ion-button>
+<ion-button (click)="addFirestore()"  expand="block" >Valider</ion-button>
+
 <ion-button expand="block" shape="round" fill="outline" routerLink="/">
   Retour
 </ion-button>
